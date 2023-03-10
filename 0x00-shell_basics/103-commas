@@ -1,0 +1,3 @@
+#!/bin/bash
+ls -1apv | sed -e 's/[^[:alnum:]\.\/]/\n/g' | sed '/^$/d' | sed -e ':a' -e 'N' -e '$!ba' -e 's/\n/, /g' -e 's/\,$/\n/'
+
