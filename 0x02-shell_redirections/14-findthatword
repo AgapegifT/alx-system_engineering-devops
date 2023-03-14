@@ -1,14 +1,2 @@
 #!/bin/bash
-
-# Read words from standard input and count their occurrences
-while read -r word; do
-    ((++count[$word]))
-done
-
-# Print unique words (i.e., those with a count of 1), sorted alphabetically
-for word in "${!count[@]}"; do
-    if ((count[$word] == 1)); then
-        echo "$word"
-    fi
-done | sort
-
+grep -i "root" /etc/psswd
